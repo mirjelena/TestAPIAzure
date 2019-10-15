@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "d6b4a6af-41d9-4ba8-aebf-11288b4d1430",
+		"name": "Meldingsmottak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Status",
+					"item": [
+						{
+							"name": "Start Alle",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1647ba2f-e3e4-49b9-a480-66169d91f0f8",
+										"exec": [
+											"pm.test(\"\", function ()",
+											"{",
+											"  if(pm.response.to.have.status(200))",
+											"      console.log(\"OK\");",
+											"  else ",
+											"      console.log(\"Ikke OK\");",
+											"}",
+											")"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://reseptregisteret-meldingsmottak-test.azurewebsites.net/api/Status/startalle",
+									"protocol": "https",
+									"host": [
+										"reseptregisteret-meldingsmottak-test",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"api",
+										"Status",
+										"startalle"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Status/startalle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Status",
+												"startalle"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Stopp Alle",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bbcb5e1b-f0fe-4b74-8125-0a9e0ba8092f",
+										"exec": [
+											"pm.test(\"\", function ()",
+											"{",
+											"  if(pm.response.to.have.status(200))",
+											"      console.log(\"OK\");",
+											"  else ",
+											"      console.log(\"Ikke OK\");",
+											"}",
+											")"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://reseptregisteret-meldingsmottak-test.azurewebsites.net/api/Status/stoppalle",
+									"protocol": "https",
+									"host": [
+										"reseptregisteret-meldingsmottak-test",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"api",
+										"Status",
+										"stoppalle"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Status/stoppalle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Status",
+												"stoppalle"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "BehandleReseptmeldinger",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e1978fbf-1cd0-4937-83d7-e37f81af3667",
+								"exec": [
+									"pm.test(\"\", function ()",
+									"{",
+									"  if(pm.response.to.have.status(200))",
+									"      console.log(\"OK\");",
+									"  else ",
+									"      console.log(\"Ikke OK\");",
+									"}",
+									")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://reseptregisteret-meldingsmottak-test.azurewebsites.net/api/BehandleReseptmeldinger",
+							"protocol": "http",
+							"host": [
+								"reseptregisteret-meldingsmottak-test",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"BehandleReseptmeldinger"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/BehandleReseptmeldinger",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"BehandleReseptmeldinger"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "HentReseptmeldingerFraTpF",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f2e66cf4-0751-4161-b301-87ab1a04799c",
+								"exec": [
+									"pm.test(\"\", function ()",
+									"{",
+									"  if(pm.response.to.have.status(200))",
+									"      console.log(\"OK\");",
+									"  else ",
+									"      console.log(\"Ikke OK\");",
+									"}",
+									")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://reseptregisteret-meldingsmottak-test.azurewebsites.net/api/HentReseptmeldingerFraTpf",
+							"protocol": "https",
+							"host": [
+								"reseptregisteret-meldingsmottak-test",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"HentReseptmeldingerFraTpf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/HentReseptmeldingerFraTpf",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"HentReseptmeldingerFraTpf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "LesInnNyeMeldinger",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1715a5f9-ca5d-4266-a95f-6e3292a616e6",
+								"exec": [
+									"pm.test(\"\", function ()",
+									"{",
+									"  if(pm.response.to.have.status(200))",
+									"      console.log(\"OK\");",
+									"  else ",
+									"      console.log(\"Ikke OK\");",
+									"}",
+									")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://reseptregisteret-meldingsmottak-test.azurewebsites.net/api/LesInnNyeMeldinger",
+							"protocol": "https",
+							"host": [
+								"reseptregisteret-meldingsmottak-test",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"LesInnNyeMeldinger"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/LesInnNyeMeldinger",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"LesInnNyeMeldinger"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "SendReseptmeldingerTilTpf",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "19989d53-8d63-43da-b6ce-ec058462bcbb",
+								"exec": [
+									"pm.test(\"\", function ()",
+									"{",
+									"  if(pm.response.to.have.status(200))",
+									"      console.log(\"OK\");",
+									"  else ",
+									"      console.log(\"Ikke OK\");",
+									"}",
+									")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://reseptregisteret-meldingsmottak-test.azurewebsites.net/api/SendReseptmeldingerTilTpf",
+							"protocol": "https",
+							"host": [
+								"reseptregisteret-meldingsmottak-test",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"SendReseptmeldingerTilTpf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/SendReseptmeldingerTilTpf",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"SendReseptmeldingerTilTpf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
